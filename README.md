@@ -26,7 +26,7 @@
 
 我的代码资源都在我的github和gitee上，大家有兴趣可以自提，CIFAR10可以利用代码下载，这里就不给出来了，当然也可以去官网。
 
-- 路径1：[Gitee](https://gitee.com/DK-Jun/csdn) [GitHub](https://github.com/Dreaming-future/Deep_learning)
+- 路径1：[Gitee](https://gitee.com/DK-Jun/Pytorch-Image-Classification) [GitHub](https://gitee.com/DK-Jun/Pytorch-Image-Classification)
 - 路径2：百度网盘
  链接：[https://pan.baidu.com/s/1uA5YU06FEW7pW8g9KaHaaw ](https://pan.baidu.com/s/1uA5YU06FEW7pW8g9KaHaaw )
   提取码：5605 
