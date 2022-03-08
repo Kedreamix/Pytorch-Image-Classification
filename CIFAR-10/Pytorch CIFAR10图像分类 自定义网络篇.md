@@ -12,7 +12,7 @@
 
 2.使用初始化Xavier
 
-3.使用BN层，减少Dropout使用
+3.使用BN层，减少Dropout使用 
 
 4.使用带动量的SGD，或许也可以尝试Adam
 

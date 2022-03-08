@@ -9,7 +9,7 @@
 希望这能够帮助初学机器学习的同学一个入门Pytorch的项目和在这之中更加了解Pytorch和各个图像分类的模型。
 
 - [Pytorch CIFAR10图像分类 数据加载与可视化篇](https://blog.csdn.net/weixin_45508265/article/details/119285113)
-
+- [Pytorch CIFAR10图像分类 工具函数utils篇](https://redamancy.blog.csdn.net/article/details/121589217)
 - [Pytorch CIFAR10图像分类 自定义网络篇](https://blog.csdn.net/weixin_45508265/article/details/119305277)
 - [Pytorch CIFAR10图像分类 LeNet5篇](https://blog.csdn.net/weixin_45508265/article/details/119305673)
 - [Pytorch CIFAR10图像分类 AlexNet篇](https://blog.csdn.net/weixin_45508265/article/details/119305848)
