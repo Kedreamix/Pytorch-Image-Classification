@@ -18,7 +18,7 @@
 - [Pytorch CIFAR10图像分类 ResNet篇](https://blog.csdn.net/weixin_45508265/article/details/119532143)
 - [Pytorch CIFAR10图像分类 DenseNet篇](https://blog.csdn.net/weixin_45508265/article/details/119648036)
 
-
+除此之外，所有的模型权重都在release之中，可以选择相对应的权重文件进行下载 [模型权重](https://github.com/Dreaming-future/Pytorch-Image-Classification/releases/tag/v1.0.0)
 
 # <font face="Courier New" size=6>Data And Code
 
