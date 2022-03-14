@@ -10,15 +10,15 @@
 
 - [Pytorch CIFAR10图像分类 数据加载与可视化篇](https://blog.csdn.net/weixin_45508265/article/details/119285113)   [B站视频](https://www.bilibili.com/video/BV1FP4y1g7sc) 
 - [Pytorch CIFAR10图像分类 工具函数utils篇](https://redamancy.blog.csdn.net/article/details/121589217) [Online Demo](https://drive.google.com/file/d/1HESbXuEb__9eXqq4tAl8owsb1FKhpO2i/view?usp=sharing)
-- [Pytorch CIFAR10图像分类 自定义网络篇](https://blog.csdn.net/weixin_45508265/article/details/119305277)  [B站视频](https://www.bilibili.com/video/BV1MF41147gZ) [Colab Demo](https://drive.google.com/file/d/1juOA9YG1lwX7QYT8bE5eaZhvZmBPQShp) for 自定义网络 [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://drive.google.com/file/d/1juOA9YG1lwX7QYT8bE5eaZhvZmBPQShp)
-- [Pytorch CIFAR10图像分类 LeNet5篇](https://blog.csdn.net/weixin_45508265/article/details/119305673)  [B站视频](https://www.bilibili.com/video/BV1FL411K7VJ)  [Colab Demo](https://drive.google.com/file/d/1x488zmoClZBwE1wugoZtFIPn-OaxXht0) for LeNet5 [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://drive.google.com/file/d/1x488zmoClZBwE1wugoZtFIPn-OaxXht0)
-- [Pytorch CIFAR10图像分类 AlexNet篇](https://blog.csdn.net/weixin_45508265/article/details/119305848)  [B站视频](https://www.bilibili.com/video/BV1xu411B75x)  [Colab Demo](https://drive.google.com/file/d/1V9oj6jz38nKoB80X2R0aUk_2DdeNHXlU) for AlexNet [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://drive.google.com/file/d/1V9oj6jz38nKoB80X2R0aUk_2DdeNHXlU)
-- [Pytorch CIFAR10图像分类 VGG篇](https://blog.csdn.net/weixin_45508265/article/details/119332904)  [B站视频](https://www.bilibili.com/video/BV12L4y1u7WH)  [Colab Demo](https://drive.google.com/file/d/1Z5dY0dw2dPz-aNFC5dVK2ZAtBdCTyrc7/view?usp=sharing) for VGG16 [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://drive.google.com/file/d/1Z5dY0dw2dPz-aNFC5dVK2ZAtBdCTyrc7)
+- [Pytorch CIFAR10图像分类 自定义网络篇](https://blog.csdn.net/weixin_45508265/article/details/119305277)  [B站视频](https://www.bilibili.com/video/BV1MF41147gZ) [Colab Demo](https://colab.research.google.com/drive/1juOA9YG1lwX7QYT8bE5eaZhvZmBPQShp) for 自定义网络 [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1juOA9YG1lwX7QYT8bE5eaZhvZmBPQShp)
+- [Pytorch CIFAR10图像分类 LeNet5篇](https://blog.csdn.net/weixin_45508265/article/details/119305673)  [B站视频](https://www.bilibili.com/video/BV1FL411K7VJ)  [Colab Demo](https://colab.research.google.com/drive/1x488zmoClZBwE1wugoZtFIPn-OaxXht0) for LeNet5 [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1x488zmoClZBwE1wugoZtFIPn-OaxXht0)
+- [Pytorch CIFAR10图像分类 AlexNet篇](https://blog.csdn.net/weixin_45508265/article/details/119305848)  [B站视频](https://www.bilibili.com/video/BV1xu411B75x)  [Colab Demo](https://colab.research.google.com/drive/1V9oj6jz38nKoB80X2R0aUk_2DdeNHXlU) for AlexNet [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1V9oj6jz38nKoB80X2R0aUk_2DdeNHXlU)
+- [Pytorch CIFAR10图像分类 VGG篇](https://blog.csdn.net/weixin_45508265/article/details/119332904)  [B站视频](https://www.bilibili.com/video/BV12L4y1u7WH)  [Colab Demo](https://colab.research.google.com/drive/1Z5dY0dw2dPz-aNFC5dVK2ZAtBdCTyrc7) for VGG16 [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1Z5dY0dw2dPz-aNFC5dVK2ZAtBdCTyrc7)
 - [Pytorch CIFAR10图像分类 GoogLeNet篇](https://blog.csdn.net/weixin_45508265/article/details/119399239)
 - [Pytorch CIFAR10图像分类 ResNet篇](https://blog.csdn.net/weixin_45508265/article/details/119532143)
 - [Pytorch CIFAR10图像分类 DenseNet篇](https://blog.csdn.net/weixin_45508265/article/details/119648036)
 
-除此之外，所有的模型权重都在release之中，可以选择相对应的权重文件进行下载 [模型权重](https://github.com/Dreaming-future/Pytorch-Image-Classification/releases/tag/v1.0.0)
+除此之外，所有的模型权重都在release之中，可以选择相对应的权重文件进行下载[模型权重](https://github.com/Dreaming-future/Pytorch-Image-Classification/releases/tag/v1.0.0)
 
 # <font face="Courier New" size=6>Data And Code
 
