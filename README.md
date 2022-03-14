@@ -1,6 +1,6 @@
 # Pytorch  CIFAR10 图像分类篇 汇总
 
-
+![在这里插入图片描述](https://img-blog.csdnimg.cn/f37d635b66334021a12521d6bed88d87.png#pic_center)
 
 接下来我会分别利用深度学习的方法，用Pytorch实现我们的CIFAR10的图像分类
 
