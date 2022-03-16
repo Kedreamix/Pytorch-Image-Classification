@@ -20,6 +20,12 @@
 
 除此之外，所有的模型权重都在release之中，可以选择相对应的权重文件进行下载[模型权重](https://github.com/Dreaming-future/Pytorch-Image-Classification/releases/tag/v1.0.0)
 
+- [Transer Learning](https://redamancy.blog.csdn.net/article/details/120213598)  [Colab Demo](https://colab.research.google.com/drive/1j7rg9eDbWnn8KJQvMVEaOgDiLUJqFxRh?usp=sharing)[![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1j7rg9eDbWnn8KJQvMVEaOgDiLUJqFxRh?usp=sharing)
+
+  数据集也可以从[release](https://github.com/Dreaming-future/Pytorch-Image-Classification/releases/tag/v1.1.0)中获取
+
+对于无法上github的同学，我们还可以通过Gitee来下载我们的代码和结果
+
 # <font face="Courier New" size=6>Data And Code
 
 我的代码资源都在我的github和gitee上，大家有兴趣可以自提，CIFAR10可以利用代码下载，这里就不给出来了，当然也可以去官网。
