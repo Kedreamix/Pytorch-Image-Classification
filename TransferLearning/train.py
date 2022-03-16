@@ -1,4 +1,3 @@
-from msilib.schema import Class
 import torch.nn as nn
 import torchvision
 import os
