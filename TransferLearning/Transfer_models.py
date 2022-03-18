@@ -105,6 +105,7 @@ def ShuffleNetv2(classes=1000):
         param.requires_grad = True
         
     shufflenet = shufflenet.to(device)
+    return shufflenet
     
 def MnasNet(classes=1000):
     mnasnet = models.mnasnet1_0(pretrained=True)
