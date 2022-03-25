@@ -22,7 +22,7 @@ python train.py --data  './cats_and_dogs_filtered/'
 
 ## 使用自己的数据集
 
-这里要注意，对于自己的数据集，需要按照一定的排列格式，可以按照你的数据集排列方式，最后在运行的时候改成python train.py --data './data'即可
+这里要注意，对于自己的数据集，需要按照一定的排列格式，可以按照你的数据集排列方式，最后在运行的时候改成python train.py --data './data'即可，除此之外，多个类别需要设置classes参数，也就是python train.py --data './data' --classes 类别
 
 ```txt
 data
