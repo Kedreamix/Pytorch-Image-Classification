@@ -93,7 +93,7 @@ if __name__ == '__main__':
     parser.add_argument('--save-path',type=str,default='model.pth',help='save model')
     parser.add_argument('--verbose',action='store_true',help='可视化训练结果')
     parser.add_argument('--logs',action='store_true',help='每次迭代后都保存模型')
-    parser.add_argument('--test-size',type=int,default=1000,help='the number for picture in data/test')
+    parser.add_argument('--test-size',type=int,default=0,help='the number for picture in data/test')
     # parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu') # 可以自动选择GPU，但是这里我就让程序自动判断
     
     opt = parser.parse_args()

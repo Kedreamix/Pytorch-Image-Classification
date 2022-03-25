@@ -14,9 +14,26 @@ python train.py --data  './cats_and_dogs_filtered/'
 		--classes 2 # set classes 
     		--epochs 10 # set epochs
         	--lr  0.02 # set learning rate
-            	--optimizer Adam # 优化器 如Adam,AdamW,SGD
+            	--optimizer 'Adam' # 优化器 如Adam,AdamW,SGD
                 --batch-size 64 # batch size
                 --verbose # 可视化
                 --logs # 日志，每次都保存模型
+```
+
+## 使用自己的数据集
+
+这里要注意，对于自己的数据集，需要按照一定的排列格式，可以按照你的数据集排列方式，最后在运行的时候改成python train.py --data './data'即可
+
+```txt
+data
+	----train
+    		----dogs
+         	----cats
+         	----...
+    ----validation
+    		----dogs
+         	----cats
+         	----...
+   	----test(放任意图片，可以在命令行设置，没有默认0)
 ```
 
