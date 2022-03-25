@@ -26,6 +26,28 @@
 
 对于无法上github的同学，我们还可以通过Gitee来下载我们的代码和结果
 
+# Comming soon
+
+- [x] MobileNetv1 Model
+
+- [ ] MobileNetv2 Model
+
+- [ ] ShuffleNetv1 Model
+
+- [ ] ShuffleNetv2 Model
+
+- [ ] ResNeXt Model
+
+- [ ] ZFNet Model
+
+- [ ] SeNet Model
+
+- [ ] Efficientent Model
+
+  
+
+
+
 # <font face="Courier New" size=6>Data And Code
 
 我的代码资源都在我的github和gitee上，大家有兴趣可以自提，CIFAR10可以利用代码下载，这里就不给出来了，当然也可以去官网。
