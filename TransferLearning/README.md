@@ -10,10 +10,10 @@ python train.py
 
 You can manually resume the training with:
 python train.py --data  './cats_and_dogs_filtered/'
-				--model 'ResNet' # choices ['AlexNet','VGG','ResNet','MobileNet','ShuffleNet','DenseNet','MnasNet']
-				--classes 2 # set classes 
-    			--epochs 10 # set epochs
-        		--lr  0.02 # set learning rate
+		--model 'ResNet' # choices ['AlexNet','VGG','ResNet','MobileNet','ShuffleNet','DenseNet','MnasNet']
+		--classes 2 # set classes 
+    		--epochs 10 # set epochs
+        	--lr  0.02 # set learning rate
             	--optimizer Adam # 优化器 如Adam,AdamW,SGD
                 --batch-size 64 # batch size
                 --verbose # 可视化
