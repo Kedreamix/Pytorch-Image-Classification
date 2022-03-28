@@ -6,3 +6,4 @@ matplotlib
 requests
 pillow
 tqdm
+torchinfo
