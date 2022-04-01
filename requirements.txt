@@ -1,6 +1,7 @@
 torch
 torchvision
 torchsummary
+torchinfo
 numpy
 matplotlib
 requests
