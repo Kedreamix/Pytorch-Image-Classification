@@ -14,8 +14,8 @@
 - [Pytorch CIFAR10图像分类 LeNet5篇](https://blog.csdn.net/weixin_45508265/article/details/119305673)  [B站视频](https://www.bilibili.com/video/BV1FL411K7VJ)  [Colab Demo](https://colab.research.google.com/drive/15B0HBssfRzQk8mJyYF-v5fwAdPtNqf3H?usp=sharing) for LeNet5 [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/15B0HBssfRzQk8mJyYF-v5fwAdPtNqf3H?usp=sharing)
 - [Pytorch CIFAR10图像分类 AlexNet篇](https://blog.csdn.net/weixin_45508265/article/details/119305848)  [B站视频](https://www.bilibili.com/video/BV1xu411B75x)  [Colab Demo](https://colab.research.google.com/drive/1d6CTYzyWeB03xiSlT8mzsZ_LtH9TlPvs?usp=sharing) for AlexNet [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1d6CTYzyWeB03xiSlT8mzsZ_LtH9TlPvs?usp=sharing)
 - [Pytorch CIFAR10图像分类 VGG篇](https://blog.csdn.net/weixin_45508265/article/details/119332904)  [B站视频](https://www.bilibili.com/video/BV12L4y1u7WH)  [Colab Demo](https://colab.research.google.com/drive/1BO0wSY3w3xma-oATLyIQRq19qjX1FxF7?usp=sharing) for VGG16 [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1BO0wSY3w3xma-oATLyIQRq19qjX1FxF7?usp=sharing)
-- [Pytorch CIFAR10图像分类 GoogLeNet篇](https://blog.csdn.net/weixin_45508265/article/details/119399239)
-- [Pytorch CIFAR10图像分类 ResNet篇](https://blog.csdn.net/weixin_45508265/article/details/119532143)
+- [Pytorch CIFAR10图像分类 GoogLeNet篇](https://blog.csdn.net/weixin_45508265/article/details/119399239)  [B站视频](https://www.bilibili.com/video/BV1RS4y1274A)  [Colab Demo](https://colab.research.google.com/drive/1BO0wSY3w3xma-oATLyIQRq19qjX1FxF7?usp=sharing) for GoogLeNet Inceptionv1  [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1o8lfWHvr4WoyTA5Y9b4mSCSw2TEbXJb7?usp=sharing)
+- [Pytorch CIFAR10图像分类 ResNet篇](https://blog.csdn.net/weixin_45508265/article/details/119532143) [B站视频]()  [Colab Demo](https://colab.research.google.com/drive/1BO0wSY3w3xma-oATLyIQRq19qjX1FxF7?usp=sharing) for ResNet [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1W6d-eTY89bvGEL_QoMq4kw7m0dP9lHkS?usp=sharing)
 - [Pytorch CIFAR10图像分类 DenseNet篇](https://blog.csdn.net/weixin_45508265/article/details/119648036)
 
 除此之外，所有的模型权重都在release之中，可以选择相对应的权重文件进行下载[模型权重](https://github.com/Dreaming-future/Pytorch-Image-Classification/releases/tag/v1.0.0)
@@ -26,25 +26,26 @@
 
 对于无法上github的同学，我们还可以通过Gitee来下载我们的代码和结果
 
-# Comming soon
+# Comming soon 更新计划
 
-- [x] MobileNetv1 Model
-
+- [x] MobileNetv1 Model 
 - [ ] MobileNetv2 Model
-
 - [ ] ShuffleNetv1 Model
-
 - [ ] ShuffleNetv2 Model
-
 - [ ] ResNeXt Model
-
 - [ ] ZFNet Model
-
 - [ ] SeNet Model
-
 - [ ] Efficientent Model
 
-  
+
+
+
+
+## 使用方法
+
+下载`CIFAR10_code`里所有文件，直接运行ipynb即可，由于我是利用一个工具函数进行训练的，所以切记utils.py是必不可少的。
+
+运行ipynb文件即可，对于网络的py文件会持续更新，之后会利用一个函数来选取对应的网络进行训练得到结果。
 
 
 
