@@ -15,8 +15,10 @@
 - [Pytorch CIFAR10图像分类 AlexNet篇](https://blog.csdn.net/weixin_45508265/article/details/119305848)  [B站视频](https://www.bilibili.com/video/BV1xu411B75x)  [Colab Demo](https://colab.research.google.com/drive/1d6CTYzyWeB03xiSlT8mzsZ_LtH9TlPvs?usp=sharing) for AlexNet [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1d6CTYzyWeB03xiSlT8mzsZ_LtH9TlPvs?usp=sharing)
 - [Pytorch CIFAR10图像分类 VGG篇](https://blog.csdn.net/weixin_45508265/article/details/119332904)  [B站视频](https://www.bilibili.com/video/BV12L4y1u7WH)  [Colab Demo](https://colab.research.google.com/drive/1BO0wSY3w3xma-oATLyIQRq19qjX1FxF7?usp=sharing) for VGG16 [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1BO0wSY3w3xma-oATLyIQRq19qjX1FxF7?usp=sharing)
 - [Pytorch CIFAR10图像分类 GoogLeNet篇](https://blog.csdn.net/weixin_45508265/article/details/119399239)  [B站视频](https://www.bilibili.com/video/BV1RS4y1274A)  [Colab Demo](https://colab.research.google.com/drive/1BO0wSY3w3xma-oATLyIQRq19qjX1FxF7?usp=sharing) for GoogLeNet Inceptionv1  [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1o8lfWHvr4WoyTA5Y9b4mSCSw2TEbXJb7?usp=sharing)
-- [Pytorch CIFAR10图像分类 ResNet篇](https://blog.csdn.net/weixin_45508265/article/details/119532143) [B站视频]()  [Colab Demo](https://colab.research.google.com/drive/1BO0wSY3w3xma-oATLyIQRq19qjX1FxF7?usp=sharing) for ResNet [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1W6d-eTY89bvGEL_QoMq4kw7m0dP9lHkS?usp=sharing)
-- [Pytorch CIFAR10图像分类 DenseNet篇](https://blog.csdn.net/weixin_45508265/article/details/119648036)
+- [Pytorch CIFAR10图像分类 ResNet篇](https://blog.csdn.net/weixin_45508265/article/details/119532143) [B站视频](https://www.bilibili.com/video/BV1Wu411v72u)  [Colab Demo](https://colab.research.google.com/drive/1BO0wSY3w3xma-oATLyIQRq19qjX1FxF7?usp=sharing) for ResNet [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1W6d-eTY89bvGEL_QoMq4kw7m0dP9lHkS?usp=sharing)
+- [Pytorch CIFAR10图像分类 DenseNet篇](https://blog.csdn.net/weixin_45508265/article/details/119648036)  [B站视频](https://www.bilibili.com/video/BV1ar4y1J77T)  [Colab Demo](https://colab.research.google.com/drive/1BO0wSY3w3xma-oATLyIQRq19qjX1FxF7?usp=sharing) for DenseNet [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1vkCEiDaOAb7TCfIErAekEikiN1Ll9IaS?usp=sharing)
+- [Pytorch CIFAR10图像分类 MobieNetv1篇]() [Colab Demo](https://colab.research.google.com/drive/1BO0wSY3w3xma-oATLyIQRq19qjX1FxF7?usp=sharing) for MobileNetv1 [![在这里插入图片描述](https://img-blog.csdnimg.cn/47fbca1712ba49719240c6dc3258ddc7.png)](https://colab.research.google.com/drive/1r2umC8IoWfM5Qk0P8yCaUT6lyNKevMkK?usp=sharing)
+- [Pytorch CIFAR10图像分类 ResNeXt篇]()
 
 除此之外，所有的模型权重都在release之中，可以选择相对应的权重文件进行下载[模型权重](https://github.com/Dreaming-future/Pytorch-Image-Classification/releases/tag/v1.0.0)
 
@@ -32,7 +34,7 @@
 - [ ] MobileNetv2 Model
 - [ ] ShuffleNetv1 Model
 - [ ] ShuffleNetv2 Model
-- [ ] ResNeXt Model
+- [x] ResNeXt Model
 - [ ] ZFNet Model
 - [ ] SeNet Model
 - [ ] Efficientent Model
