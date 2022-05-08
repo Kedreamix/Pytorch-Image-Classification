@@ -23,7 +23,8 @@ if __name__ == '__main__':
     parser.add_argument('--cuda', action='store_true', default=False, help =' use GPU?')
     parser.add_argument('--batch-size', default=64, type=int, help = "Batch Size for Training")
     parser.add_argument('--num-workers', default=2, type=int, help = 'num-workers')
-    parser.add_argument('--net', type = str, default='MobileNetv1', help='net type')
+    parser.add_argument('--net', type = str, choices=['LeNet5', 'AlexNet', 'VGG16','VGG19','ResNet18','ResNet34',   
+                                                       'DenseNet','MobileNetv1','MobileNetv2'], default='MobileNetv1', help='net type')
     parser.add_argument('--epochs', type = int, default=20, help = 'Epochs')
     parser.add_argument('--resume', '-r', action='store_true', help='resume from checkpoint')
     parser.add_argument('--patience', '-p', type = int, default=7, help='patience for Early stop')
@@ -50,7 +51,7 @@ if __name__ == '__main__':
     elif args.net == 'ResNet34':
         from nets.ResNet import ResNet34
         net = ResNet34()
-    elif args.net == 'LeNet':
+    elif args.net == 'LeNet5':
         from nets.LeNet5 import LeNet5
         net = LeNet5()
     elif args.net == 'AlexNet':
