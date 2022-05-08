@@ -32,7 +32,8 @@ if __name__ == '__main__':
     parser.add_argument('--cuda', action='store_true', default=False, help =' use GPU?')
     parser.add_argument('--batch-size', default=64, type=int, help = "Batch Size for Test")
     parser.add_argument('--num-workers', default=2, type=int, help = 'num-workers')
-    parser.add_argument('--net', type = str, default='MobileNetv1', help='net type')
+    parser.add_argument('--net', type = str, choices=['LeNet5', 'AlexNet', 'VGG16','VGG19','ResNet18','ResNet34',   
+                                                       'DenseNet','MobileNetv1','MobileNetv2'], default='MobileNetv1', help='net type')
     args = parser.parse_args()
     testloader = get_test_dataloader()
 

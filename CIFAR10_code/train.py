@@ -135,7 +135,8 @@ if __name__ == '__main__':
                                     'Lr'   : lr})
                 pbar.update(1)
         # train_loss = train_loss.item() / len(trainloader)
-        # train_acc = train_acc.item() * 100 / len(trainloader)    
+        # train_acc = train_acc.item() * 100 / len(trainloader)
+        scheduler.step(train_loss)
         print('Finish Train')
     def test(epoch):
         global best_acc
@@ -200,6 +201,6 @@ if __name__ == '__main__':
     for epoch in range(start_epoch, epochs):
         train(epoch)
         test(epoch)
-        scheduler.step()
+        
     torch.cuda.empty_cache()
     
