@@ -79,6 +79,6 @@ def test():
     from torchinfo import summary
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     net = net.to(device)
-    summary(net,(32,3,32,32))
+    summary(net,(2,3,32,32))
     
 test()

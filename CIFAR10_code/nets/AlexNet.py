@@ -59,7 +59,7 @@ def test():
     x = torch.randn(2,3,32,32)
     y = net(x)
     print(y.size())
-    from torchsummary import summary
+    from torchinfo import summary
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     net = net.to(device)
     summary(net,(3,32,32))
