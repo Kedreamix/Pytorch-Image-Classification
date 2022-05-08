@@ -68,18 +68,6 @@ class MobileNetV2(nn.Module):
                 in_channels = out_channels
         return nn.Sequential(*layers)
     
-    def init_weight(self):
-        for w in self.modules():
-            if isinstance(w, nn.Conv2d):
-                nn.init.kaiming_normal_(w.weight, mode='fan_out')
-                if w.bias is not None:
-                    nn.init.zeros_(w.bias)
-            elif isinstance(w, nn.BatchNorm2d):
-                nn.init.ones_(w.weight)
-                nn.init.zeros_(w.bias)
-            elif isinstance(w, nn.Linear):
-                nn.init.normal_(w.weight, 0, 0.01)
-                nn.init.zeros_(w.bias)    
     
     def forward(self, x):
         out = self.relu6(self.bn1(self.conv1(x)))
