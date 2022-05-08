@@ -56,15 +56,29 @@ class MobileNet(nn.Module):
         x = x.view(x.size()[0],-1)
         x = self.linear(x)
         return x
-    
+
+    def init_weight(self):
+        for w in self.modules():
+            if isinstance(w, nn.Conv2d):
+                nn.init.kaiming_normal_(w.weight, mode='fan_out')
+                if w.bias is not None:
+                    nn.init.zeros_(w.bias)
+            elif isinstance(w, nn.BatchNorm2d):
+                nn.init.ones_(w.weight)
+                nn.init.zeros_(w.bias)
+            elif isinstance(w, nn.Linear):
+                nn.init.normal_(w.weight, 0, 0.01)
+                nn.init.zeros_(w.bias)
+
+
 def test():
     net = MobileNet()
     x = torch.randn(2,3,32,32)
     y = net(x)
     print(y.size())
-    from torchsummary import summary
+    from torchinfo import summary
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     net = net.to(device)
-    summary(net,(3,32,32))
+    summary(net,(32,3,32,32))
     
-# test()
+test()
