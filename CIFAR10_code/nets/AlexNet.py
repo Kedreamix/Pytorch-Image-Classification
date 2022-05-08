@@ -7,7 +7,7 @@ import torch.nn as nn
 
 # 定义2012的AlexNet
 class AlexNet(nn.Module): 
-    def __init__(self,num_classes=10):
+    def __init__(self,num_classes=10, init_weights=True):
         super(AlexNet,self).__init__()
         # 五个卷积层 输入 32 * 32 * 3
         self.conv1 = nn.Sequential(
@@ -43,7 +43,8 @@ class AlexNet(nn.Module):
             nn.ReLU(),
             nn.Linear(84,num_classes)
         )
-    
+        if init_weights:
+            self._initialize_weights()
     def forward(self,x):
         x = self.conv1(x)
         x = self.conv2(x)
@@ -53,7 +54,19 @@ class AlexNet(nn.Module):
         x = x.view(x.size()[0],-1)
         x = self.fc(x)
         return x
-
+    
+    def _initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
+                if m.bias is not None:
+                    nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.constant_(m.bias, 0)
 def test():
     net = AlexNet()
     x = torch.randn(2,3,32,32)

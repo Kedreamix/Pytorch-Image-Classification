@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 
 class LeNet5(nn.Module):
-    def __init__(self, num_classes = 10):
+    def __init__(self, num_classes = 10, init_weights=True):
         super(LeNet5,self).__init__()
         self.conv1 = nn.Sequential(
             # 输入 32x32x3 -> 28x28x6 (32-5)/1 + 1=28
@@ -30,7 +30,8 @@ class LeNet5(nn.Module):
             nn.ReLU(),
             nn.Linear(84,num_classes)
         )
-        
+        if init_weights:
+            self._initialize_weights()
     def forward(self,x):
         x = self.conv1(x)
         x = self.conv2(x)
@@ -39,6 +40,18 @@ class LeNet5(nn.Module):
         x = self.fc(x)
         return x
     
+    def _initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
+                if m.bias is not None:
+                    nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.constant_(m.bias, 0)    
 
 def test():
     net = LeNet5()

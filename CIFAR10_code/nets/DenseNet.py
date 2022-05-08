@@ -72,7 +72,7 @@ class DenseNet(nn.Module):
   ->(384, 1, 1) -> [Linear] -> (10)
     
     """
-    def __init__(self, num_blocks, growth_rate=12, reduction=0.5, num_classes=10):
+    def __init__(self, num_blocks, growth_rate=12, reduction=0.5, num_classes=10, init_weights=True):
         super(DenseNet, self).__init__()
         self.growth_rate = growth_rate
         self.reduction = reduction
@@ -91,7 +91,8 @@ class DenseNet(nn.Module):
         )
         self.classifier = nn.Linear(num_channels, num_classes)
         
-        self._initialize_weight()
+        if init_weights:
+            self._initialize_weights()
         
     def _make_dense_layer(self, in_channels, nblock, transition=True):
         layers = []
@@ -104,12 +105,18 @@ class DenseNet(nn.Module):
             layers += [Transition(in_channels, out_channels)]
         return nn.Sequential(*layers), out_channels
     
-    def _initialize_weight(self):
+    def _initialize_weights(self):
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
-                nn.init.kaiming_normal_(m.weight.data)
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
                 if m.bias is not None:
-                    m.bias.data.zero_()
+                    nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.constant_(m.bias, 0)
     
     def forward(self, x):
         out = self.features(x)

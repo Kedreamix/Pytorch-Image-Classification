@@ -79,7 +79,7 @@ class ResNet(nn.Module):
  -> (16, 16, 128) -> [Res3] -> (8, 8, 256) ->[Res4] -> (4, 4, 512) -> [AvgPool] 
  -> (1, 1, 512) -> [Reshape] -> (512) -> [Linear] -> (10)
     """
-    def __init__(self, block, num_blocks, num_classes=10, verbose = False):
+    def __init__(self, block, num_blocks, num_classes=10, verbose = False,  init_weights=True):
         super(ResNet, self).__init__()
         self.verbose = verbose
         self.in_channels = 64
@@ -97,7 +97,11 @@ class ResNet(nn.Module):
         # 所以这里用了 4 x 4 的平均池化
         self.avg_pool = nn.AvgPool2d(kernel_size=4)
         self.classifer = nn.Linear(512 * block.expansion, num_classes)
-        
+
+        if init_weights:
+            self._initialize_weights()
+
+                    
     def _make_layer(self, block, out_channels, num_blocks, stride):
         # 第一个block要进行降采样
         strides = [stride] + [1] * (num_blocks - 1)
@@ -130,6 +134,18 @@ class ResNet(nn.Module):
         out = self.classifer(out)
         return out
     
+    def _initialize_weights(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode='fan_out', nonlinearity='relu')
+                if m.bias is not None:
+                    nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.BatchNorm2d):
+                nn.init.constant_(m.weight, 1)
+                nn.init.constant_(m.bias, 0)
+            elif isinstance(m, nn.Linear):
+                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.constant_(m.bias, 0)
 def ResNet18(verbose=False):
     return ResNet(BasicBlock, [2,2,2,2],verbose=verbose)
 
