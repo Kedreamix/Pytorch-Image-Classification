@@ -51,7 +51,7 @@ if __name__ == '__main__':
     elif args.net == 'ResNet34':
         from nets.ResNet import ResNet34
         net = ResNet34()
-    elif args.net == 'LeNet':
+    elif args.net == 'LeNet5':
         from nets.LeNet5 import LeNet5
         net = LeNet5()
     elif args.net == 'AlexNet':
