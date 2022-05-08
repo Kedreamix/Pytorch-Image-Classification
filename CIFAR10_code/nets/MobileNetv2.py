@@ -101,4 +101,4 @@ def test():
     net = net.to(device)
     summary(net,(2,3,32,32))
     
-test() 
+# test() 
