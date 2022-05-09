@@ -27,7 +27,7 @@ if __name__ == '__main__':
     parser.add_argument('--epochs', type = int, default=20, help = 'Epochs')
     parser.add_argument('--resume', '-r', action='store_true', help='resume from checkpoint')
     parser.add_argument('--patience', '-p', type = int, default=7, help='patience for Early stop')
-    parser.add_argument('--optim','-o',type = str, choices = ['sgd','adam','adamw'],help = 'choose optimizer')
+    parser.add_argument('--optim','-o',type = str, choices = ['sgd','adam','adamw'], default = 'adamw', help = 'choose optimizer')
 
     args = parser.parse_args()
     
