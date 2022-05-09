@@ -27,6 +27,8 @@ if __name__ == '__main__':
     parser.add_argument('--epochs', type = int, default=20, help = 'Epochs')
     parser.add_argument('--resume', '-r', action='store_true', help='resume from checkpoint')
     parser.add_argument('--patience', '-p', type = int, default=7, help='patience for Early stop')
+    parser.add_argument('--optim','-o',type = str, choices = ['sgd','adam','adamw'],help = 'choose optimizer')
+
     args = parser.parse_args()
     
     print(args)
@@ -86,7 +88,13 @@ if __name__ == '__main__':
 
     early_stopping = EarlyStopping(patience = args.patience, verbose=True)
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.AdamW(net.parameters(), lr=args.lr)
+    if args.optim == 'adamw':
+        optimizer = optim.AdamW(net.parameters(), lr=args.lr)
+    elif args.optim == 'adam':
+        optimizer = optim.Adam(net.parameters(), lr=args.lr)
+    else:
+        optimizer = optim.SGD(net.parameters(), lr=args.lr,
+                        momentum=0.9, weight_decay=5e-4)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'min', factor=0.94,verbose=True,patience = 1,min_lr = 0.000001) # 动态更新学习率
 
     epochs = args.epochs
