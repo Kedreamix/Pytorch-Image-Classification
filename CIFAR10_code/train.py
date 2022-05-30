@@ -68,10 +68,11 @@ if __name__ == '__main__':
         from nets.MobileNetv2 import MobileNetV2
         net = MobileNetV2()
 
-    if args.cuda and torch.cuda.is_available():
+    if args.cuda:
         device = 'cuda'
         net = torch.nn.DataParallel(net)
-        cudnn.benchmark = True
+        # 当计算图不会改变的时候（每次输入形状相同，模型不改变）的情况下可以提高性能，反之则降低性能
+        torch.backends.cudnn.benchmark = True
     else:
         device = 'cpu'
         
