@@ -7,3 +7,4 @@ requests
 pillow
 tqdm
 torchinfo
+tensorboardX
