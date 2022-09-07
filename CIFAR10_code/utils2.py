@@ -74,7 +74,7 @@ def train(epoch, epochs, model, dataloader, criterion, optimizer, scheduler = No
     
     train_step = len(dataloader)
     with tqdm(total=train_step,desc=f'Train Epoch {epoch + 1}/{epochs}',postfix=dict,mininterval=0.3) as pbar:
-        for step,(data, target) in tqdm(dataloader):
+        for step,(data, target) in enumerate(dataloader):
             data = data.to(device)
             target = target.to(device)
             output = model(data)
@@ -119,7 +119,7 @@ def evaluation(epoch, epochs, model, dataloader, criterion):
         test_accuracy = 0.0
         test_loss = 0.0
         with tqdm(total=eval_step,desc=f'Evaluation Epoch {epoch + 1}/{epochs}',postfix=dict,mininterval=0.3) as pbar:
-            for step,(data, target) in tqdm(dataloader):
+            for step,(data, target) in enumerate(dataloader):
                 data = data.to(device)
                 target = target.to(device)
 
