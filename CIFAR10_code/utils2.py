@@ -94,7 +94,7 @@ def train(epoch, epochs, model, dataloader, criterion, optimizer, scheduler = No
             loss.backward()
             optimizer.step()
                 
-            pbar.set_postfix(**{'Train Acc' : running_accuracy.items()/(step+1),
+            pbar.set_postfix(**{'Train Acc' : running_accuracy.item()/(step+1),
                                 'Train Loss' :running_loss.item()/(step+1)})
             pbar.update(1)
     if scheduler:
@@ -139,7 +139,7 @@ def evaluation(epoch, epochs, model, dataloader, criterion):
                 test_accuracy += acc
                 test_loss += loss.item()
                 
-                pbar.set_postfix(**{'Eval Acc' : test_accuracy.items()/(step+1),
+                pbar.set_postfix(**{'Eval Acc' : test_accuracy.item()/(step+1),
                                 'Eval Loss' :test_loss/(step+1)})
                 pbar.update(1)
                 
