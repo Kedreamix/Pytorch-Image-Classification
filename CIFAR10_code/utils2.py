@@ -130,8 +130,8 @@ def evaluation(epoch, epochs, model, dataloader, criterion):
                 test_accuracy += acc
                 test_loss += loss.item()
                 
-                pbar.set_postfix(**{'Eval Acc' : test_accuracy.item()/(step+1),
-                                'Eval Loss' :test_loss.item()/(step+1)})
+                pbar.set_postfix(**{'Eval Acc' : test_accuracy.items()/(step+1),
+                                'Eval Loss' :test_loss/(step+1)})
                 pbar.update(1)
                 
     test_loss, test_accuracy = test_loss/eval_step, test_accuracy/eval_step
