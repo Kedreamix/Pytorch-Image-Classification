@@ -71,27 +71,31 @@ def train(epoch, epochs, model, dataloader, criterion, optimizer, scheduler = No
     running_accuracy = 0.0
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     
-    
+    model.train()
     train_step = len(dataloader)
     with tqdm(total=train_step,desc=f'Train Epoch {epoch + 1}/{epochs}',postfix=dict,mininterval=0.3) as pbar:
         for step,(data, target) in enumerate(dataloader):
             data = data.to(device)
             target = target.to(device)
+            #---------------------
+            #  释放内存
+            #---------------------
+            if hasattr(torch.cuda, 'empty_cache'):
+                torch.cuda.empty_cache()
+            optimizer.zero_grad()
+            
             output = model(data)
             loss = criterion(output, target)
-            
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
+        
 
             acc = get_acc(output,target)
             running_accuracy += acc
             running_loss += loss.data
-            
-            lr = optimizer.param_groups[0]['lr']
+            loss.backward()
+            optimizer.step()
+                
             pbar.set_postfix(**{'Train Acc' : running_accuracy.item()/(step+1),
-                                'Train Loss' :running_loss.item()/(step+1),  
-                                'Lr'   : lr})
+                                'Train Loss' :running_loss.item()/(step+1)})
             pbar.update(1)
     if scheduler:
         scheduler.step(running_loss)
@@ -122,8 +126,13 @@ def evaluation(epoch, epochs, model, dataloader, criterion):
             for step,(data, target) in enumerate(dataloader):
                 data = data.to(device)
                 target = target.to(device)
-
+                #---------------------
+                #  释放内存
+                #---------------------
+                if hasattr(torch.cuda, 'empty_cache'):
+                    torch.cuda.empty_cache()
                 output = model(data)
+                
                 loss = criterion(output, target)
                 acc = get_acc(output,target)
                 
