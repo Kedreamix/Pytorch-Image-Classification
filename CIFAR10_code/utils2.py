@@ -145,3 +145,54 @@ def evaluation(epoch, epochs, model, dataloader, criterion):
                 
     test_loss, test_accuracy = test_loss/eval_step, test_accuracy/eval_step
     return test_loss, test_accuracy
+
+def test(model, dataloader):
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    correct = 0   # 定义预测正确的图片数，初始化为0
+    total = 0     # 总共参与测试的图片数，也初始化为0
+    model.eval()
+    with torch.no_grad():
+        for data in dataloader:  # 循环每一个batch
+            images, labels = data
+            images = images.to(device)
+            labels = labels.to(device)
+            model.eval()  # 把模型转为test模式
+            if hasattr(torch.cuda, 'empty_cache'):
+                torch.cuda.empty_cache()
+            outputs = model(images)  # 输入网络进行测试
+
+            # outputs.data是一个4x10张量，将每一行的最大的那一列的值和序号各自组成一个一维张量返回，第一个是值的张量，第二个是序号的张量。
+            _, predicted = torch.max(outputs.data, 1)
+            total += labels.size(0)          # 更新测试图片的数量
+            correct += (predicted == labels).sum() # 更新正确分类的图片的数量
+
+    print('Accuracy of the network on the %d test images: %.2f %%' % (total, 100 * correct / total))
+
+
+def test_precls(model, dataloader, classes):
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    # 定义2个存储每类中测试正确的个数的 列表，初始化为0
+    class_correct = list(0. for i in range(10))
+    class_total = list(0. for i in range(10))
+    # testloader = torch.utils.data.DataLoader(testset, batch_size=64,shuffle=True, num_workers=2)
+    model.eval()
+    with torch.no_grad():
+        for data in dataloader:
+            images, labels = data
+            images = images.to(device)
+            labels = labels.to(device)
+            if hasattr(torch.cuda, 'empty_cache'):
+                torch.cuda.empty_cache()
+            outputs = model(images)
+
+            _, predicted = torch.max(outputs.data, 1)
+
+            c = (predicted == labels).squeeze()
+            for i in range(len(images)):      # 因为每个batch都有4张图片，所以还需要一个4的小循环
+                label = labels[i]   # 对各个类的进行各自累加
+                class_correct[label] += c[i]
+                class_total[label] += 1
+    
+    
+    for i in range(10):
+        print('Accuracy of %5s : %.2f %%' % (classes[i], 100 * class_correct[i] / class_total[i]))
