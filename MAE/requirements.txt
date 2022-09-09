@@ -1,0 +1,9 @@
+torch
+torchvision
+tensorboard
+einops
+timm
+tqdm
+torchinfo
+numpy
+matplotlib
