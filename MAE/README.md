@@ -43,6 +43,8 @@ tensorboard --logdir logs
 
 可以查看结果
 
+
+
 ### Result
 
 |Model|Validation Acc|
@@ -55,3 +57,7 @@ tensorboard --logdir logs
 
 
 ![avatar](pic/mae-cifar10-reconstruction.png)
+
+、
+
+由于TensorBoard的文件太大了，所以没有传上去，不过我上传了，大家可以自由查看https://tensorboard.dev/experiment/GIv9UzukQ5yFalbykPVMFQ/
