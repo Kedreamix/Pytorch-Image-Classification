@@ -1,10 +1,24 @@
+import os
 import torch
-import torch.nn as nn
-import time
 import matplotlib.pyplot as plt
 import numpy as np
+import random
 from tqdm import tqdm # 在脚本中使用较好
 # from tqdm import tqdm_notebook as tqdm # 在jupyter中使用
+
+
+def setup_seed(seed):
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    # When running on the CuDNN backend, two further options must be set
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+    # torch.backends.cudnn.benchmark = True 可以加速卷积的运算
+    # Set a fixed value for the hash seed
+    os.environ["PYTHONHASHSEED"] = str(seed)
+    print(f"Random seed set as {seed}")
 
 
 def get_mean_and_std(dataset):
