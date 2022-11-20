@@ -62,15 +62,47 @@
 
 > 具体的详情可以关注[Keras CIFAR-10 分类汇总篇](https://blog.csdn.net/weixin_45508265/article/details/127859003)
 
+---
 
+### 💝 有趣的项目和尝试
+
+- [MAE实现及预训练可视化 （CIFAR-Pytorch）][MAE]
 
 ---
 
+## 📅 Comming soon 更新计划
+
+- [x] LetNet
+- [x] AlexNet
+- [x] VGG
+- [x] ResNet
+- [x] GoogLeNet
+- [x] DenseNet
+- [x] ResNeXt Model
+- [x] MobileNetv1
+- [x] MobileNetv2
+- [ ] ShuffleNetv1
+- [ ] ShuffleNetv2
+- [ ] ZFNet
+- [ ] SeNet
+- [ ] Efficiententv1
+- [x] ViT
+- [ ] Swin-Transformer
+- [ ] ConvNeXt
+
+---
+
+最后这个是我写的一个pytorch的基础的介绍，[Pytorch Note 快乐星球](https://blog.csdn.net/weixin_45508265/article/details/117809512)，从0开始的完整的介绍pytorch和pytorch的简单语法，并且里面有一些项目和学习，还是很不错的哦，可以查看，除此之外，有什么想法可以加我wx: `pikachu2biubiu`聊哦，需要什么帮助也可以付费聊咨询。
+
+
+
 [1]: https://redamancy.blog.csdn.net/article/details/126445778
+
 [2]: https://redamancy.blog.csdn.net/article/details/126446810
 [3]: https://redamancy.blog.csdn.net/article/details/126590621
+
 [4]: https://redamancy.blog.csdn.net/article/details/126591761
 [5]: https://redamancy.blog.csdn.net/article/details/126669709
 [6]: https://redamancy.blog.csdn.net/article/details/127827641
 [7]: https://redamancy.blog.csdn.net/article/details/127828318
-
+[MAE]: https://redamancy.blog.csdn.net/article/details/126863995

@@ -34,47 +34,48 @@
 
 https://github.com/Dreaming-future/Pytorch-Image-Classification/releases/tag/v1.0.0
 
+## 📅 Comming soon 更新计划
 
-
-# Comming soon 更新计划
-
-- [x] MobileNetv1 Model 
-- [x] MobileNetv2 Model
+- [x] LetNet
+- [x] AlexNet
+- [x] VGG
+- [x] ResNet
+- [x] GoogLeNet
+- [x] DenseNet
 - [x] ResNeXt Model
-- [x] Vision Transformer
-- [ ] ShuffleNetv1 Model
-- [ ] ShuffleNetv2 Model
-- [ ] ZFNet Model
-- [ ] SeNet Model
-- [ ] Efficientent Model
-- [ ] Swin Transformer
+- [x] MobileNetv1
+- [x] MobileNetv2
+- [ ] ShuffleNetv1
+- [ ] ShuffleNetv2
+- [ ] ZFNet
+- [ ] SeNet
+- [ ] Efficiententv1
+- [x] ViT
+- [ ] Swin-Transformer
+- [ ] ConvNeXt
 
+---
 
+## 🧰 使用方法
 
-## 使用方法
-
-下载`CIFAR10_code`里所有文件，直接运行ipynb即可，由于我是利用一个工具函数进行训练的，所以切记utils.py是必不可少的。
+下载`CIFAR10`里所有文件，直接运行ipynb即可，由于我是利用一个工具函数进行训练的，所以**切记utils.py是必不可少的。**
 
 运行ipynb文件即可，对于网络的py文件会持续更新，之后会利用一个函数来选取对应的网络进行训练得到结果。
 
+---
 
-
-# <font face="Courier New" size=6>Data And Code
-
-我的代码资源都在我的github和gitee上，大家有兴趣可以自提，CIFAR10可以利用代码下载，这里就不给出来了，当然也可以去官网。
-
-- 路径1：[Gitee](https://gitee.com/DK-Jun/Pytorch-Image-Classification) [GitHub](https://github.com/Dreaming-future/Pytorch-Image-Classification)
-
-- 路径2：百度网盘（网盘有时没有时常更新，多关注github）
-  链接：[https://pan.baidu.com/s/1uA5YU06FEW7pW8g9KaHaaw ](https://pan.baidu.com/s/1uA5YU06FEW7pW8g9KaHaaw )
-  提取码：5605 
-
-  
+## 📚 参考
 
 除此之外，我还为图像分类这个专栏录了一下我的视频讲解，感兴趣的小伙伴可以来我的B站看视频进行学习，啃代码的时候，可能听一下也会有更多的感触哦
 [https://space.bilibili.com/241286257/channel/seriesdetail?sid=2075039](https://space.bilibili.com/241286257/channel/seriesdetail?sid=2075039)
 
-参考
+---
 
-- [Pytorch Note 快乐星球](https://blog.csdn.net/weixin_45508265/article/details/117809512)
+最后这个是我写的一个pytorch的基础的介绍，[Pytorch Note 快乐星球](https://blog.csdn.net/weixin_45508265/article/details/117809512)，从0开始的完整的介绍pytorch和pytorch的简单语法，并且里面有一些项目和学习，还是很不错的哦，可以查看，除此之外，有什么想法可以加我wx: `pikachu2biubiu`聊哦，需要什么帮助也可以付费聊咨询。
+
+![二维码](../QR.png)
+
+
+
+
 

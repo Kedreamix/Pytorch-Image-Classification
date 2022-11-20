@@ -62,50 +62,54 @@
 
 > 具体的详情可以关注[Keras CIFAR-10 分类汇总篇](https://blog.csdn.net/weixin_45508265/article/details/127859003)
 
-## 有趣的项目和尝试
+---
 
-- [MAE实现及预训练可视化 （CIFAR-Pytorch）](MAE)
+### 💝 有趣的项目和尝试
+
+- [MAE实现及预训练可视化 （CIFAR-Pytorch）][MAE]
 
 ---
 
-# Comming soon 更新计划
+## 📅 Comming soon 更新计划
 
-- [x] MobileNetv1 Model
-
-- [x] MobileNetv2 Model
-
-- [ ] ShuffleNetv1 Model
-
-- [ ] ShuffleNetv2 Model
-
+- [x] LetNet
+- [x] AlexNet
+- [x] VGG
+- [x] ResNet
+- [x] GoogLeNet
+- [x] DenseNet
 - [x] ResNeXt Model
+- [x] MobileNetv1
+- [x] MobileNetv2
+- [ ] ShuffleNetv1
+- [ ] ShuffleNetv2
+- [ ] ZFNet
+- [ ] SeNet
+- [ ] Efficiententv1
+- [x] ViT
+- [ ] Swin-Transformer
+- [ ] ConvNeXt
 
-- [ ] ZFNet Model
+---
 
-- [ ] SeNet Model
+## 🧰 使用方法
 
-- [ ] Efficientent Model
-
-- [x] ViT Model
-
-## 使用方法
-
-下载`CIFAR10`里所有文件，直接运行ipynb即可，由于我是利用一个工具函数进行训练的，所以切记utils.py是必不可少的。
+下载`CIFAR10`里所有文件，直接运行ipynb即可，由于我是利用一个工具函数进行训练的，所以**切记utils.py是必不可少的。**
 
 运行ipynb文件即可，对于网络的py文件会持续更新，之后会利用一个函数来选取对应的网络进行训练得到结果。
 
 ---
 
-## 参考
+## 📚 参考
 
 除此之外，我还为图像分类这个专栏录了一下我的视频讲解，感兴趣的小伙伴可以来我的B站看视频进行学习，啃代码的时候，可能听一下也会有更多的感触哦
 [https://space.bilibili.com/241286257/channel/seriesdetail?sid=2075039](https://space.bilibili.com/241286257/channel/seriesdetail?sid=2075039)
 
 ---
 
-最后这个是我写的一个pytorch的基础[Pytorch Note 快乐星球](https://blog.csdn.net/weixin_45508265/article/details/117809512)，里面有一些项目和学习，还是很不错的哦，可以查看，除此之外，有什么想法可以加我wx `pikachu2biubiu`聊哦，需要什么帮助也可以付费聊咨询。
+最后这个是我写的一个pytorch的基础的介绍，[Pytorch Note 快乐星球](https://blog.csdn.net/weixin_45508265/article/details/117809512)，从0开始的完整的介绍pytorch和pytorch的简单语法，并且里面有一些项目和学习，还是很不错的哦，可以查看，除此之外，有什么想法可以加我wx: `pikachu2biubiu`聊哦，需要什么帮助也可以付费聊咨询。
 
-![二维码](./二维码.png)
+![二维码](QR.png)
 
 
 
