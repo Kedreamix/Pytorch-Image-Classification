@@ -1,0 +1,17 @@
+*.pkl
+*.jpg
+*.png
+*.mp4
+*.pyc
+*.pth
+__pycache__
+*.h5
+*.avi
+*.wav
+*.pyc
+*.mkv
+*.gif
+*.webm
+*.mp3
+*.zip
+CIFAR10-Keras/
