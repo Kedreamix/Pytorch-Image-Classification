@@ -1,10 +1,23 @@
 # ✨Pytorch&Keras CIFAR10图像分类
 
-[toc]
+<!-- TOC -->
 
+- [✨Pytorch&Keras CIFAR10图像分类](#pytorchkeras-cifar10图像分类)
+    - [🧑‍🎓适用人群](#‍适用人群)
+    - [📚︎博客汇总](#︎博客汇总)
+        - [💻︎ Pytorch CIFAR10 图像分类](#︎-pytorch-cifar10-图像分类)
+            - [⁉ 数据处理以及工具函数（网络篇前必看）](#⁉-数据处理以及工具函数网络篇前必看)
+            - [❕ 网络篇](#-网络篇)
+        - [🖥︎ Keras CIFAR10 图像分类](#🖥︎-keras-cifar10-图像分类)
+        - [💝 有趣的项目和尝试](#-有趣的项目和尝试)
+    - [📅 Comming soon 更新计划](#-comming-soon-更新计划)
+    - [🧰 使用方法](#🧰-使用方法)
+    - [📚 参考](#-参考)
+
+<!-- /TOC -->
 ![Keras vs PyTorch vs Caffe - Comparing the Implementation of CNN](https://149695847.v2.pressablecdn.com/wp-content/uploads/2020/08/create-machine-learning-and-deep-learning-models-using-pytorch-and-tensorflow.jpg#pic_center)
 
-## 💪专栏介绍
+💪专栏介绍
 
 一开始写这个专栏的初衷是，**有时候有些代码找的太繁琐了，并且找到了还运行不出来，或者运行了，但是没有一个很好的理解**，所以基于此，我写了这个CIFAR10图像分类的专栏，借此希望，大家都能通过我这个专栏，找到自己想要的模型或者学习深度学习的代码。
 
@@ -32,12 +45,20 @@
 
 ### 💻︎ Pytorch CIFAR10 图像分类
 
+在看网络篇的时候，可以先看前三个，前三个说明的如何加载数据包括数据的预处理以及进行可视化，工具函数篇介绍了如何构建训练的函数，并且有时候会遇到一部分utils.py的错误，在这里面都有很好的解释和进行学习。
+
+#### ⁉ 数据处理以及工具函数（网络篇前必看）
+
 - [Pytorch CIFAR10图像分类 数据加载与可视化篇](https://blog.csdn.net/weixin_45508265/article/details/119285113)
 - [Pytorch CIFAR10图像分类 工具函数utils篇](https://redamancy.blog.csdn.net/article/details/121589217) 
 - [Pytorch CIFAR10图像分类 工具函数utils更新v2.0篇](https://redamancy.blog.csdn.net/article/details/127856569)
+
+#### ❕ 网络篇
+
 - [Pytorch CIFAR10图像分类 自定义网络篇](https://blog.csdn.net/weixin_45508265/article/details/119305277)
 - [Pytorch CIFAR10图像分类 LeNet5篇](https://blog.csdn.net/weixin_45508265/article/details/119305673)
 - [Pytorch CIFAR10图像分类 AlexNet篇](https://blog.csdn.net/weixin_45508265/article/details/119305848)  
+- [Pytorch CIFAR10图像分类 ZFNet篇](https://blog.csdn.net/weixin_45508265/article/details/128560595)
 - [Pytorch CIFAR10图像分类 VGG篇](https://blog.csdn.net/weixin_45508265/article/details/119332904) 
 - [Pytorch CIFAR10图像分类 GoogLeNet篇](https://blog.csdn.net/weixin_45508265/article/details/119399239)
 - [Pytorch CIFAR10图像分类 ResNet篇](https://blog.csdn.net/weixin_45508265/article/details/119532143) 
@@ -45,6 +66,7 @@
 - [Pytorch CIFAR10图像分类 MobieNetv1篇](https://redamancy.blog.csdn.net/article/details/124636103) 
 - [Pytorch CIFAR10图像分类 ResNeXt篇](https://redamancy.blog.csdn.net/article/details/126655797)  
 - [Pytorch CIFAR10 图像分类 Vision Transformer篇](https://redamancy.blog.csdn.net/article/details/126751948)
+- [Pytorch CIFAR10 图像分类 EfficientNet篇](https://redamancy.blog.csdn.net/article/details/128585354)
 
 > 具体的详情可以关注[Pytorch CIFAR10图像分类汇总篇](https://redamancy.blog.csdn.net/article/details/119285255)
 
@@ -83,9 +105,9 @@
 - [x] MobileNetv2
 - [ ] ShuffleNetv1
 - [ ] ShuffleNetv2
-- [ ] ZFNet
+- [x] ZFNet
 - [ ] SeNet
-- [ ] Efficiententv1
+- [x] Efficiententv1
 - [x] ViT
 - [ ] Swin-Transformer
 - [ ] ConvNeXt
