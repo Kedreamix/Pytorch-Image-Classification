@@ -1,4 +1,5 @@
-'''SENet in PyTorch.
+'''
+SENet in PyTorch.
 SENet is the winner of ImageNet-2017. The paper is not released yet.
 '''
 import torch
@@ -7,23 +8,23 @@ import torch.nn.functional as F
 
 
 class BasicBlock(nn.Module):
-    def __init__(self, in_planes, planes, stride=1):
+    def __init__(self, in_channels, channels, stride=1):
         super(BasicBlock, self).__init__()
-        self.conv1 = nn.Conv2d(in_planes, planes, kernel_size=3, stride=stride, padding=1, bias=False)
-        self.bn1 = nn.BatchNorm2d(planes)
-        self.conv2 = nn.Conv2d(planes, planes, kernel_size=3, stride=1, padding=1, bias=False)
-        self.bn2 = nn.BatchNorm2d(planes)
+        self.conv1 = nn.Conv2d(in_channels, channels, kernel_size=3, stride=stride, padding=1, bias=False)
+        self.bn1 = nn.BatchNorm2d(channels)
+        self.conv2 = nn.Conv2d(channels, channels, kernel_size=3, stride=1, padding=1, bias=False)
+        self.bn2 = nn.BatchNorm2d(channels)
 
         self.shortcut = nn.Sequential()
-        if stride != 1 or in_planes != planes:
+        if stride != 1 or in_channels != channels:
             self.shortcut = nn.Sequential(
-                nn.Conv2d(in_planes, planes, kernel_size=1, stride=stride, bias=False),
-                nn.BatchNorm2d(planes)
+                nn.Conv2d(in_channels, channels, kernel_size=1, stride=stride, bias=False),
+                nn.BatchNorm2d(channels)
             )
 
         # SE layers
-        self.fc1 = nn.Conv2d(planes, planes//16, kernel_size=1)  # Use nn.Conv2d instead of nn.Linear
-        self.fc2 = nn.Conv2d(planes//16, planes, kernel_size=1)
+        self.fc1 = nn.Conv2d(channels, channels//16, kernel_size=1)  # Use nn.Conv2d instead of nn.Linear
+        self.fc2 = nn.Conv2d(channels//16, channels, kernel_size=1)
 
     def forward(self, x):
         out = F.relu(self.bn1(self.conv1(x)))
@@ -34,7 +35,7 @@ class BasicBlock(nn.Module):
         w = F.relu(self.fc1(w))
         w = F.sigmoid(self.fc2(w))
         # Excitation
-        out = out * w  # New broadcasting feature from v0.2!
+        out = out * w
 
         out += self.shortcut(x)
         out = F.relu(out)
@@ -42,21 +43,21 @@ class BasicBlock(nn.Module):
 
 
 class PreActBlock(nn.Module):
-    def __init__(self, in_planes, planes, stride=1):
+    def __init__(self, in_channels, channels, stride=1):
         super(PreActBlock, self).__init__()
-        self.bn1 = nn.BatchNorm2d(in_planes)
-        self.conv1 = nn.Conv2d(in_planes, planes, kernel_size=3, stride=stride, padding=1, bias=False)
-        self.bn2 = nn.BatchNorm2d(planes)
-        self.conv2 = nn.Conv2d(planes, planes, kernel_size=3, stride=1, padding=1, bias=False)
+        self.bn1 = nn.BatchNorm2d(in_channels)
+        self.conv1 = nn.Conv2d(in_channels, channels, kernel_size=3, stride=stride, padding=1, bias=False)
+        self.bn2 = nn.BatchNorm2d(channels)
+        self.conv2 = nn.Conv2d(channels, channels, kernel_size=3, stride=1, padding=1, bias=False)
 
-        if stride != 1 or in_planes != planes:
+        if stride != 1 or in_channels != channels:
             self.shortcut = nn.Sequential(
-                nn.Conv2d(in_planes, planes, kernel_size=1, stride=stride, bias=False)
+                nn.Conv2d(in_channels, channels, kernel_size=1, stride=stride, bias=False)
             )
 
         # SE layers
-        self.fc1 = nn.Conv2d(planes, planes//16, kernel_size=1)
-        self.fc2 = nn.Conv2d(planes//16, planes, kernel_size=1)
+        self.fc1 = nn.Conv2d(channels, channels//16, kernel_size=1)
+        self.fc2 = nn.Conv2d(channels//16, channels, kernel_size=1)
 
     def forward(self, x):
         out = F.relu(self.bn1(x))
@@ -78,7 +79,7 @@ class PreActBlock(nn.Module):
 class SENet(nn.Module):
     def __init__(self, block, num_blocks, num_classes=10):
         super(SENet, self).__init__()
-        self.in_planes = 64
+        self.in_channels = 64
 
         self.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
         self.bn1 = nn.BatchNorm2d(64)
@@ -88,12 +89,12 @@ class SENet(nn.Module):
         self.layer4 = self._make_layer(block, 512, num_blocks[3], stride=2)
         self.linear = nn.Linear(512, num_classes)
 
-    def _make_layer(self, block, planes, num_blocks, stride):
+    def _make_layer(self, block, channels, num_blocks, stride):
         strides = [stride] + [1]*(num_blocks-1)
         layers = []
         for stride in strides:
-            layers.append(block(self.in_planes, planes, stride))
-            self.in_planes = planes
+            layers.append(block(self.in_channels, channels, stride))
+            self.in_channels = channels
         return nn.Sequential(*layers)
 
     def forward(self, x):
