@@ -70,6 +70,8 @@
 - [Pytorch CIFAR10 图像分类 Vision Transformer篇](https://redamancy.blog.csdn.net/article/details/126751948)
 - [Pytorch CIFAR10图像分类 EfficientNet篇](https://blog.csdn.net/weixin_45508265/article/details/128585354)
 - [Pytorch CIFAR10图像分类 ShuffleNet篇](https://blog.csdn.net/weixin_45508265/article/details/130945031)
+- [Pytorch CIFAR10图像分类 ShuffleNetv2篇](https://blog.csdn.net/weixin_45508265/article/details/130938341)
+- [Pytorch CIFAR10图像分类 Swin Tansformer篇](https://blog.csdn.net/weixin_45508265/article/details/134773753)
 
 > 具体的详情可以关注[Pytorch CIFAR10图像分类汇总篇](https://redamancy.blog.csdn.net/article/details/119285255)
 
@@ -111,8 +113,8 @@
 - [x] Efficientent
 - [x] ViT
 - [x] ShuffleNetv1
-- [ ] ShuffleNetv2
-- [ ] Swin-Transformer
+- [x] ShuffleNetv2
+- [x] Swin-Transformer
 - [ ] ConvNeXt
 - [ ] ConvNeXtv2
 

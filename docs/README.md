@@ -45,13 +45,13 @@ https://github.com/Dreaming-future/Pytorch-Image-Classification/releases/tag/v1.
 - [x] ResNeXt Model
 - [x] MobileNetv1
 - [x] MobileNetv2
-- [ ] ShuffleNetv1
-- [ ] ShuffleNetv2
-- [ ] ZFNet
-- [ ] SeNet
-- [ ] Efficiententv1
+- [x] ShuffleNetv1
+- [x] ShuffleNetv2
+- [x] ZFNet
+- [x] SeNet
+- [x] Efficiententv1
 - [x] ViT
-- [ ] Swin-Transformer
+- [x] Swin-Transformer
 - [ ] ConvNeXt
 
 ---
