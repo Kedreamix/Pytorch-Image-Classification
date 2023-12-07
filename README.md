@@ -141,11 +141,9 @@
 
 
 
+## Star History
 
-
-
-
-
+[![Star History Chart](https://api.star-history.com/svg?repos=Kedreamix/Pytorch-Image-Classification&type=Date)](https://star-history.com/#Kedreamix/Pytorch-Image-Classification&Date)
 
 
 
